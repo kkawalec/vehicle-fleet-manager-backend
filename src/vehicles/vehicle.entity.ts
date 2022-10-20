@@ -5,13 +5,13 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-enum CarType {
+export enum CarType {
   SUV = 'SUV',
   Truck = 'Truck',
   Hybrid = 'Hybrid',
 }
 
-type GeolocationPoint = {
+export type GeolocationPoint = {
   latitude: string;
   longitude: string;
 };

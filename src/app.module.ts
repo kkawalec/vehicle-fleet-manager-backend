@@ -8,7 +8,7 @@ import { ConfigModule } from '@nestjs/config';
 
 import { Vehicle } from './vehicles/vehicle.entity';
 
-import {VehiclesInit1666205985039} from '../migrations/1666205985039-VehiclesInit'
+import { VehiclesInit1666205985039 } from '../migrations/1666205985039-VehiclesInit';
 
 @Module({
   imports: [
@@ -21,25 +21,13 @@ import {VehiclesInit1666205985039} from '../migrations/1666205985039-VehiclesIni
         entities: [Vehicle],
         migrations: [VehiclesInit1666205985039],
         synchronize: false, // do not set to true for production!!
-        migrationsTableName: "migrations",
-      "ssl": {
-        "rejectUnauthorized": false,
+        migrationsTableName: 'migrations',
+        ssl: {
+          rejectUnauthorized: false, // temporary setup for dev/testing.
         },
       }),
       inject: [ConfigService],
     }),
-
-    // TypeOrmModule.forRoot({
-    //   type: 'postgres',
-    //   url: 'postgres://deihjtelbbuywj:873ff9aefc7f925c03eb2663ef96efbaad81972e8127f59fa409485ebae6f900@ec2-3-222-74-92.compute-1.amazonaws.com:5432/daosdk9lg30d60',
-    //   entities: [Vehicle],
-    //   migrations: [/*...*/],
-    //   synchronize: false, // do not set to true for production!!
-    //   migrationsTableName: "migrations",
-    //   "ssl": {
-    //     "rejectUnauthorized": false,
-    //     },
-    // }),
     VehiclesModule,
   ],
   controllers: [AppController],
