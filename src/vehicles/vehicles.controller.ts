@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Delete } from '@nestjs/common';
 import { CreateAndUpdateVehicleDto } from './create-and-update-vehicle.dto';
 import { VehiclesService } from './vehicles.service';
 import { Vehicle } from './vehicle.entity';
@@ -30,5 +30,10 @@ export class VehiclesController {
   @Get(':id')
   findOne(@Param('id') id: string): Promise<Vehicle> {
     return this.vehiclesService.findOne(id);
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string): Promise<void> {
+    return this.vehiclesService.remove(id);
   }
 }
