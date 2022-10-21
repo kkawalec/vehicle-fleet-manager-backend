@@ -12,11 +12,11 @@ export enum CarType {
 }
 
 export type GeolocationPoint = {
-  latitude: string;
-  longitude: string;
+  lat: string;
+  lng: string;
 };
 
-@Entity()
+@Entity({ name: 'vehicle' })
 export class Vehicle {
   @PrimaryGeneratedColumn('uuid')
   id: string;
