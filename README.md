@@ -52,6 +52,10 @@ git push heroku main
 
 where "main" is the name of the branch you want to deploy.
 
-## License
+App will be deployed to [https://boiling-eyrie-36583.herokuapp.com/](https://boiling-eyrie-36583.herokuapp.com/)
+Please note, that app is currently running on free Heroku postgres db, which can stop working after Heroku update on 28th October.
 
-Nest is [MIT licensed](LICENSE).
+## Frontend app
+
+Code is on [Github](https://github.com/kkawalec/vehicle-fleet-manager-frontend)
+And working example is deployed to [https://aedriell-vehicles-fleet-manager.surge.sh/](https://aedriell-vehicles-fleet-manager.surge.sh/)
